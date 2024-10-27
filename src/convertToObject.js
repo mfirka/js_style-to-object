@@ -16,7 +16,9 @@ function convertToObject(sourceString) {
         .split(':')
         .map((part) => part.trim());
 
-      styleObject[property] = value;
+      if (property && value) {
+        styleObject[property] = value;
+      }
     }
   });
 
